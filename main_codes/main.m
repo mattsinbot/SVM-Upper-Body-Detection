@@ -2,6 +2,11 @@ clc
 clear
 close all
 
+% Warning: make sure VL_FEAT is installed
+% For installation http://www.vlfeat.org/install-matlab.html
+run('/home/nobug-ros/Documents/vlfeat/toolbox/vl_setup');
+
+% Add path to supporting codes
 addpath('../supporting_codes/');
 
 % Warning
@@ -43,7 +48,7 @@ for itr = 1:2
     % Construct Temp NegD
     [nD, nlb, imRegs] = HW2_Utils.getNegex(w, b, 'train');
     nD = double(nD);
-        
+
     % Union of old and new
     NegD = [NegD nD];
     Negy = -1*ones(size(NegD, 2), 1);
