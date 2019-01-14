@@ -2,6 +2,8 @@ clc
 clear
 close all
 
+addpath('/supporting_codes');
+
 % Warning
 num = 181; % first 181 are positive examples
 C = 7;
